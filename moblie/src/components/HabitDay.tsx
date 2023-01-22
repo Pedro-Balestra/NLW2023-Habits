@@ -1,4 +1,4 @@
-import { Dimensions, TouchableOpacity } from "react-native";
+import { Dimensions, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 const WEEK_DAYS = 7;
 const SCREE_HORIZONTAL_PADDING = (32 * 2) / 5
@@ -6,7 +6,11 @@ const SCREE_HORIZONTAL_PADDING = (32 * 2) / 5
 export const DAY_MARGIN_BETWEEN = 8;
 export const DAY_SIZE = (Dimensions.get('screen').width / WEEK_DAYS) - (SCREE_HORIZONTAL_PADDING + 5)
 
-export function HabityDay() {
+interface Props extends TouchableOpacityProps {
+
+}
+
+export function HabityDay({ ...rest }: Props) {
     return (
         <TouchableOpacity
             className="bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800"
