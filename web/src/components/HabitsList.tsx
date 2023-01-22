@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 
 interface HabitsListProps {
     date: Date;
-    onCompletedChange: (completed: number) => void
+    onCompletedChanged: (completed: number) => void
 }
 
 interface HabitsInfo {
@@ -18,7 +18,7 @@ interface HabitsInfo {
     completedHabits: string[]
 }
 
-export function HabitsList({ date, onCompletedChange }: HabitsListProps) {
+export function HabitsList({ date, onCompletedChanged }: HabitsListProps) {
 
     const [habitsInfo, setHabitsInfo] = useState<HabitsInfo>()
 
@@ -51,7 +51,7 @@ export function HabitsList({ date, onCompletedChange }: HabitsListProps) {
             completedHabits,
         })
 
-        onCompletedChange(completedHabits.length)
+        onCompletedChanged(completedHabits.length)
     }
 
     const isDateInPast = dayjs(date).endOf('day').isBefore(new Date())

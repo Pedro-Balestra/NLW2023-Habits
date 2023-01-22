@@ -22,7 +22,6 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: HabitDayPro
 
     function handleCompletedChange(completed: number) {
         setCompleted(completed)
-
     }
 
     return (
@@ -46,7 +45,7 @@ export function HabitDay({ defaultCompleted = 0, amount = 0, date }: HabitDayPro
 
                     <ProgressBar progress={completedPercentage} />
 
-                    <HabitsList date={date} onCompletedChange={handleCompletedChange} />
+                    <HabitsList date={date} onCompletedChanged={handleCompletedChange} />
 
                     <Popover.Arrow height={8} width={16} className='fill-zinc-900' />
                 </Popover.Content>
