@@ -17,7 +17,7 @@ export function CheckBox({ title, checked = false, ...rest }: Props) {
             {
                 checked
                     ?
-                    <View className="h-8 bg-green-500 items-center justify-center">
+                    <View className="h-8 w-8 bg-green-500 rounded-lg items-center justify-center">
                         <Feather
                             name="check"
                             size={20}
